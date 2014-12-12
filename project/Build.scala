@@ -20,10 +20,14 @@ object Build extends Build {
     .settings(libraryDependencies ++=
       compile(
         akkaActor,
-        akkaSlf4j
+        akkaSlf4j,
+        sprayUtil,
+        ficus
       ) ++
       test(
-        scalatest
+        scalatest,
+        akkaTestkit,
+        sprayTestkit
       )
     )
 
