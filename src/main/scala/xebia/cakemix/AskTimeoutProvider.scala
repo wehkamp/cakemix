@@ -17,7 +17,9 @@ trait AskTimeoutProvider {
 }
 
 object AskTimeoutProvider {
-  def fromConfig(config: Config, key: String): Timeout = {
+  private val AskTimeoutConfigKey = "xebia.cakemix.ask-timeout"
+
+  def fromConfig(config: Config, key: String = AskTimeoutConfigKey): Timeout = {
     Timeout(config.as[FiniteDuration](key))
   }
 }
@@ -30,4 +32,3 @@ trait ActorAskTimeoutProvider extends AskTimeoutProvider { this: Actor ⇒
 trait TestOnlyHardcodedAskTimeoutProvider extends AskTimeoutProvider {
   implicit def askTimeout = Timeout(1 second)
 }
-
