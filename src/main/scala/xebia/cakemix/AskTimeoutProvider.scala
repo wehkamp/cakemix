@@ -17,7 +17,7 @@ trait AskTimeoutProvider {
 }
 
 object AskTimeoutProvider {
-  private val AskTimeoutConfigKey = "xebia.cakemix.ask-timeout"
+  private val AskTimeoutConfigKey = "cakemix.ask-timeout"
 
   def fromConfig(config: Config, key: String = AskTimeoutConfigKey): Timeout = {
     Timeout(config.as[FiniteDuration](key))
