@@ -21,13 +21,11 @@ object Build extends Build {
       compile(
         akkaActor,
         akkaSlf4j,
-        sprayUtil,
         ficus
       ) ++
       test(
         scalatest,
-        akkaTestkit,
-        sprayTestkit
+        akkaTestkit
       )
     )
 
