@@ -3,7 +3,6 @@ import sbt.Keys._
 
 object Dependencies {
   val akkaVersion  = "2.4.1"
-  // val sprayVersion = "1.3.2"
 
   val akkaActor     = "com.typesafe.akka"  %% "akka-actor"       % akkaVersion
   val akkaSlf4j     = "com.typesafe.akka"  %% "akka-slf4j"       % akkaVersion
