@@ -1,7 +1,6 @@
 package xebia.cakemix
 
 import akka.event._
-import spray.util.LoggingContext
 
 /**
  * Handy trait for expressing a need for an Akka LoggerAdapter.
@@ -16,7 +15,7 @@ trait LoggingProvider {
  * NoOp implementation of the LoggingProvider trait, mainly for use in tests.
  */
 trait NoLoggingProvider extends LoggingProvider {
-  def log = LoggingContext.fromAdapter(NoLogging)
+  def log = NoLogging
 }
 
 /**
