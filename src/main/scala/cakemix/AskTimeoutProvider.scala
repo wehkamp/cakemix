@@ -1,4 +1,4 @@
-package xebia.cakemix
+package cakemix
 
 import scala.concurrent.duration._
 

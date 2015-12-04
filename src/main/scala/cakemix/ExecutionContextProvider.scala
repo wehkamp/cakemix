@@ -1,4 +1,4 @@
-package xebia.cakemix
+package cakemix
 
 import scala.concurrent.ExecutionContext
 import akka.actor._
@@ -13,7 +13,7 @@ trait ExecutionContextProvider {
 
 /**
  * Implementation of ExecutionContextProvider that bridges with
- * [[xebia.cakemix.ActorRefFactoryProvider]] so anything that provides an
+ * [[cakemix.ActorRefFactoryProvider]] so anything that provides an
  * ActorRefFactory will get the dispatcher of the associated ActorSystem
  * provided as the ExecutionContext.
  */
@@ -22,7 +22,7 @@ trait ActorRefFactoryExecutionContextProvider extends ExecutionContextProvider w
 }
 
 /**
- * Implementation of [[xebia.cakemix.ExecutionContextProvider]] for use in Actors.
+ * Implementation of [[cakemix.ExecutionContextProvider]] for use in Actors.
  * It uses the Actor's context dispatcher as the ExecutionContext.
  */
 trait ActorExecutionContextProvider extends ExecutionContextProvider { this: Actor ⇒
@@ -30,7 +30,7 @@ trait ActorExecutionContextProvider extends ExecutionContextProvider { this: Act
 }
 
 /**
- * Implementation of [[xebia.cakemix.ExecutionContextProvider]] that uses the
+ * Implementation of [[cakemix.ExecutionContextProvider]] that uses the
  * ExecutionContext provided by scala.concurrent.ExecutionContext.global.
  */
 trait GlobalExecutionContextProvider {

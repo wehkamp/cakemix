@@ -1,4 +1,4 @@
-package xebia.cakemix
+package cakemix
 
 import akka.actor._
 
@@ -10,7 +10,7 @@ trait SchedulerProvider {
 }
 
 /**
- * Implementation of [[xebia.cakemix.SchedulerProvider]] that uses the
+ * Implementation of [[cakemix.SchedulerProvider]] that uses the
  * actor's context to provide an instance of Scheduler.
  */
 trait SchedulerProviderForActors { this: Actor ⇒
