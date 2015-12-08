@@ -1,4 +1,4 @@
-package xebia.cakemix
+package cakemix
 
 import akka.actor._
 

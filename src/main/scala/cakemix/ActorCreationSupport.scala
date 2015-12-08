@@ -1,4 +1,4 @@
-package xebia.cakemix
+package cakemix
 
 import akka.actor._
 
@@ -12,7 +12,7 @@ import akka.actor._
  * provide parts of the API and their implementations (i.e. child actors).
  * Those Mixin traits can then use this trait to abstract away the creation of
  * child actors until they all gets mixed in together with an implementation
- * like [[xebia.cakemix.ActorCreationSupportForActors]].
+ * like [[cakemix.ActorCreationSupportForActors]].
  */
 trait ActorCreationSupport {
   def createChild(props: Props, name: String): ActorRef
@@ -21,7 +21,7 @@ trait ActorCreationSupport {
 }
 
 /**
- * The default implementation of the [[xebia.cakemix.ActorCreationSupport]] that
+ * The default implementation of the [[cakemix.ActorCreationSupport]] that
  * can be mixed into Actors.
  */
 trait ActorCreationSupportForActors extends ActorCreationSupport { this: Actor ⇒
