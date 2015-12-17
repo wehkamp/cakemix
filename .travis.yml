@@ -2,3 +2,5 @@ language: scala
 sudo: false
 scala:
  - 2.11.7
+after_success:
+ - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && sbt publish
