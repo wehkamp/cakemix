@@ -8,7 +8,7 @@ object Build extends Build {
 
   lazy val basicSettings = Seq(
     organization := "com.xebia",
-    version := "0.1.1-SNAPSHOT",
+    version in ThisBuild := "0.1.1-SNAPSHOT",
     scalaVersion := "2.11.7",
     scalacOptions := basicScalacOptions,
     incOptions := incOptions.value.withNameHashing(true)
