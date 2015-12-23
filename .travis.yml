@@ -1,4 +1,14 @@
 language: scala
+
 sudo: false
+
 scala:
- - 2.11.7
+- 2.11.7
+
+env:
+  global:
+  - secure: f3gjOYISwFiuC9HWshGf94cm+exzlt+hLNsBQpAgdEHJakw6Q1xJr31q+tUv19hdBVCsdeAKedie4JAvTcElCi+O4cnQ1Gb6H1bCO+v8ZlSx6a8S9KGKs28opj24gXj8nbji34/WCj6a43Wxqblu+YLym1H+pUgWaIxYY3QyF4U=
+  - secure: tkQO31DPOEZ4b2fV6+YnUtLUUm9tmwwLMttNv9fqm5Ucc5ihQOk0yeDtbs4KFcNXek9NrtOCh2tERGezf4QgK21pbTg5KZQA+j8KejluibhWahELZGpVVZg7AJaXOXs4etVD7isoi3fe0W3kik9V2xhkgBzG/GH9g9KP5JUyWPo=
+
+after_success:
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && sbt publish

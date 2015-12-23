@@ -4,6 +4,7 @@ import sbt.Keys._
 object Build extends Build {
   import Dependencies._
   import Formatting._
+  import Publishing._
 
   lazy val basicSettings = Seq(
     organization := "com.xebia",
@@ -13,7 +14,7 @@ object Build extends Build {
     incOptions := incOptions.value.withNameHashing(true)
   )
 
-  lazy val libSettings = basicSettings ++ formattingSettings
+  lazy val libSettings = basicSettings ++ formattingSettings ++ publishingSettings
 
   lazy val preso = Project("cakemix", file("."))
     .settings(libSettings: _*)
