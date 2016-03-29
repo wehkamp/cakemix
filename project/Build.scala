@@ -10,7 +10,8 @@ object Build extends Build {
     organization := "com.xebia",
     scalaVersion := "2.11.7",
     scalacOptions := basicScalacOptions,
-    incOptions := incOptions.value.withNameHashing(true)
+    incOptions := incOptions.value.withNameHashing(true),
+    licenses := Seq("The MIT License (MIT)" -> url("http://opensource.org/licenses/MIT"))
   )
 
   lazy val libSettings = basicSettings ++ formattingSettings ++ publishingSettings
