@@ -2,9 +2,12 @@ import sbt._
 import sbt.Keys._
 import xerial.sbt.Sonatype._
 import SonatypeKeys._
+import sbtrelease.ReleasePlugin.autoImport._
+import com.typesafe.sbt.pgp._
 
 object Publishing {
   lazy val publishingSettings = sonatypeSettings ++ Seq(
+    releasePublishArtifactsAction := PgpKeys.publishSigned.value,
     publishTo := {
       val nexus = "https://oss.sonatype.org/"
 
