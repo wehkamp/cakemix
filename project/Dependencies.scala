@@ -2,7 +2,7 @@ import sbt._
 import sbt.Keys._
 
 object Dependencies {
-  val akkaVersion  = "2.4.4"
+  val akkaVersion  = "2.4.7"
 
   val akkaActor     = "com.typesafe.akka"  %% "akka-actor"       % akkaVersion
   val akkaSlf4j     = "com.typesafe.akka"  %% "akka-slf4j"       % akkaVersion
