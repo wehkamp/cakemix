@@ -8,7 +8,7 @@ object Build extends Build {
 
   lazy val basicSettings = Seq(
     organization := "com.xebia",
-    scalaVersion := "2.11.7",
+    scalaVersion := "2.11.8",
     scalacOptions := basicScalacOptions,
     incOptions := incOptions.value.withNameHashing(true),
     licenses := Seq("The MIT License (MIT)" -> url("http://opensource.org/licenses/MIT"))
@@ -32,7 +32,7 @@ object Build extends Build {
 
   val basicScalacOptions = Seq(
     "-encoding", "utf8",
-    "-target:jvm-1.7",
+    "-target:jvm-1.8",
     "-feature",
     "-language:implicitConversions",
     "-language:postfixOps",
