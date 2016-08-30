@@ -6,7 +6,7 @@ object Dependencies {
   val akkaActor     = "com.typesafe.akka"  %% "akka-actor"       % akkaVersion
   val akkaSlf4j     = "com.typesafe.akka"  %% "akka-slf4j"       % akkaVersion
 
-  val ficus         = "net.ceedubs"        %% "ficus"            % "1.1.2"
+  val ficus         = "com.iheart"         %% "ficus"            %  "1.2.6"
 
   val akkaTestkit   = "com.typesafe.akka"  %% "akka-testkit"     % akkaVersion
   val scalatest     = "org.scalatest"      %% "scalatest"        % "3.0.0"
