@@ -18,6 +18,7 @@ object Build extends Build {
 
   lazy val preso = Project("cakemix", file("."))
     .settings(libSettings: _*)
+    .settings(dependencySettings: _*)
     .settings(libraryDependencies ++=
       compile(
         akkaActor,

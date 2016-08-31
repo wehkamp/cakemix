@@ -1,6 +1,12 @@
+import sbt.Keys._
 import sbt._
 
 object Dependencies {
+
+  lazy val dependencySettings = Seq(
+    resolvers += Resolver.jcenterRepo
+  )
+
   val akkaVersion  = "2.4.9"
 
   val akkaActor     = "com.typesafe.akka"  %% "akka-actor"       % akkaVersion
