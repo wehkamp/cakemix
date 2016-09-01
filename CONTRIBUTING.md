@@ -6,5 +6,9 @@ PR's welcome!
      export SONATYPE_PASSWORD=your_username
     sbt release
 
-Then log in to oss.sonatype.org, find the upload under 'Staging Repositories',
-close, refresh and release.
+Then:
+* log in to oss.sonatype.org
+* find the upload under 'Staging Repositories'
+* close
+* refresh
+* release
