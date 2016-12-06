@@ -6,7 +6,7 @@ import akka.actor._
  * Mixin trait that provides an Akka Scheduler.
  */
 trait SchedulerProvider {
-  def scheduler: Scheduler
+  implicit def scheduler: Scheduler
 }
 
 /**
