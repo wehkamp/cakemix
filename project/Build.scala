@@ -17,7 +17,7 @@ object Build extends Build {
 
   lazy val preso = Project("cakemix", file("."))
     .settings(libSettings: _*)
-    .settings(libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.1")
+    .settings(libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.3")
 
   val basicScalacOptions = Seq(
     "-encoding", "utf8",
