@@ -2,7 +2,6 @@ import sbt._
 import sbt.Keys._
 
 object Build extends Build {
-  import Dependencies._
   import Formatting._
   import Publishing._
 
@@ -18,12 +17,7 @@ object Build extends Build {
 
   lazy val preso = Project("cakemix", file("."))
     .settings(libSettings: _*)
-    .settings(dependencySettings: _*)
-    .settings(libraryDependencies ++=
-      compile(
-        akkaActor
-      )
-    )
+    .settings(libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.1")
 
   val basicScalacOptions = Seq(
     "-encoding", "utf8",
