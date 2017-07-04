@@ -22,12 +22,7 @@ object Build extends Build {
     .settings(libraryDependencies ++=
       compile(
         akkaActor,
-        akkaSlf4j,
         ficus
-      ) ++
-      test(
-        scalatest,
-        akkaTestkit
       )
     )
 
