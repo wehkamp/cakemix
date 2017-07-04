@@ -11,8 +11,6 @@ object Dependencies {
 
   val akkaActor     = "com.typesafe.akka"  %% "akka-actor"       % akkaVersion
 
-  val ficus         = "com.iheart"         %% "ficus"            %  "1.4.0"
-
   def compile   (deps: ModuleID*): Seq[ModuleID] = deps map (_ % "compile")
   def provided  (deps: ModuleID*): Seq[ModuleID] = deps map (_ % "provided")
   def test      (deps: ModuleID*): Seq[ModuleID] = deps map (_ % "test")

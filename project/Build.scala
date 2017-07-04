@@ -21,8 +21,7 @@ object Build extends Build {
     .settings(dependencySettings: _*)
     .settings(libraryDependencies ++=
       compile(
-        akkaActor,
-        ficus
+        akkaActor
       )
     )
 
