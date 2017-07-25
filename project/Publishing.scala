@@ -7,6 +7,7 @@ import com.typesafe.sbt.pgp._
 
 object Publishing {
   lazy val publishingSettings = sonatypeSettings ++ Seq(
+    releaseCrossBuild := true,
     releasePublishArtifactsAction := PgpKeys.publishSigned.value,
     publishTo := {
       val nexus = "https://oss.sonatype.org/"
