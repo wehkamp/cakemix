@@ -14,7 +14,7 @@ object Formatting {
       .setPreference(AlignParameters, false)
       .setPreference(AlignSingleLineCaseStatements, true)
       .setPreference(AlignSingleLineCaseStatements.MaxArrowIndent, 90)
+      .setPreference(DanglingCloseParenthesis, Preserve)
       .setPreference(DoubleIndentClassDeclaration, true)
-      .setPreference(PreserveDanglingCloseParenthesis, true)
       .setPreference(RewriteArrowSymbols, true)
 }
