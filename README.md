@@ -7,5 +7,11 @@ cakemix
 
 Scala micro-lib containing handy mixin traits for building Akka applications
 
+## Setup
+
+Cakemix has been published for Scala 2.11 and 2.12. To start using it add the following to your `build.sbt`:
+
+    libraryDependencies += "com.xebia" %% "cakemix" % "1.0.0"
+
 ## License
 The code is available under the [MIT license](LICENSE).
