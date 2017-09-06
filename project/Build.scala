@@ -9,6 +9,7 @@ object Build extends Build {
     organization := "com.xebia",
     scalaVersion := "2.12.2",
     crossScalaVersions := Seq("2.11.11", "2.12.2"),
+    releaseCrossBuild := true,
     scalacOptions := basicScalacOptions,
     incOptions := incOptions.value.withNameHashing(true),
     licenses := Seq("The MIT License (MIT)" -> url("http://opensource.org/licenses/MIT"))
