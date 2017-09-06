@@ -12,7 +12,7 @@ trait ActorRefFactoryProvider {
     refFactory match {
       case x: ActorContext        ⇒ actorSystem(x.system)
       case x: ExtendedActorSystem ⇒ x
-      case x                      ⇒ throw new IllegalArgumentException("Unsupported ActorRefFactory implementation: " + refFactory)
+      case _                      ⇒ throw new IllegalArgumentException("Unsupported ActorRefFactory implementation: " + refFactory)
     }
   }
 }
