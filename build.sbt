@@ -11,7 +11,7 @@ licenses := Seq("The MIT License (MIT)" -> url("http://opensource.org/licenses/M
 formattingSettings
 publishingSettings
 
-libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.4"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.12"
 
 val basicScalacOptions = Seq(
   "-encoding", "utf8",
