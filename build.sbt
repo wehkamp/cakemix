@@ -3,15 +3,15 @@ import Publishing._
 
 name := "cakemix"
 organization := "com.xebia"
-scalaVersion := "2.12.4"
-crossScalaVersions := Seq("2.11.12", "2.12.4")
+scalaVersion := "2.12.8"
+crossScalaVersions := Seq("2.11.12", "2.12.8")
 scalacOptions := basicScalacOptions
 licenses := Seq("The MIT License (MIT)" -> url("http://opensource.org/licenses/MIT"))
 
 formattingSettings
 publishingSettings
 
-libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.12"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.21"
 
 val basicScalacOptions = Seq(
   "-encoding", "utf8",
