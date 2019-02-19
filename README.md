@@ -1,7 +1,7 @@
 cakemix
 =======
 
-[![Build Status](https://travis-ci.org/xebia/cakemix.svg)](https://travis-ci.org/xebia/cakemix)
+[![Build Status](https://travis-ci.org/wehkamp/cakemix.svg)](https://travis-ci.org/wehkamp/cakemix)
 ![Current Version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg?style=flat "1.1.0")
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat "MIT")](LICENSE)
 
