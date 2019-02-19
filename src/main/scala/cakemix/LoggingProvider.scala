@@ -38,7 +38,7 @@ trait StdOutLoggingProvider extends LoggingProvider {
     protected def notifyError(message: String): Unit = println(s"[error] $message")
     protected def notifyError(cause: Throwable, message: String): Unit = {
       println(s"[error]: $message")
-      cause.printStackTrace
+      cause.printStackTrace()
     }
   }
 }

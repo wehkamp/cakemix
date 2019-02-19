@@ -26,5 +26,5 @@ trait ActorCreationSupport {
  */
 trait ActorCreationSupportForActors extends ActorCreationSupport { this: Actor ⇒
   def createChild(props: Props, name: String): ActorRef = context.actorOf(props, name)
-  def getChild(name: String) = context.child(name)
+  def getChild(name: String): Option[ActorRef] = context.child(name)
 }
