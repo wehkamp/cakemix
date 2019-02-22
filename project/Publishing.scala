@@ -1,31 +1,19 @@
-import sbt._
 import sbt.Keys._
-import xerial.sbt.Sonatype._
 import sbtrelease.ReleasePlugin.autoImport._
-import com.typesafe.sbt.pgp._
+import bintray.BintrayKeys._
 
 object Publishing {
-  lazy val publishingSettings = sonatypeSettings ++ Seq(
+  lazy val publishingSettings = Seq(
     releaseCrossBuild := true,
-    releasePublishArtifactsAction := PgpKeys.publishSigned.value,
-    publishTo := {
-      val nexus = "https://oss.sonatype.org/"
 
-      if (isSnapshot.value)
-        Some("snapshots" at nexus + "content/repositories/snapshots")
-      else
-        Some("releases" at nexus + "service/local/staging/deploy/maven2")
-    },
-    credentials ++= (
-      for {
-        username ← sys.env.get("SONATYPE_USERNAME")
-        password ← sys.env.get("SONATYPE_PASSWORD")
-      } yield Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", username, password)).toSeq,
-    pomExtra := (
-      <url>https://github.com/xebia/cakemix#readme</url>
+    bintrayOrganization := Some("wehkamp"),
+    bintrayRepository := "releases",
+
+    pomExtra :=
+      <url>https://github.com/wehkamp/cakemix#readme</url>
       <scm>
-        <url>git@github.com:xebia/cakemix.git</url>
-        <connection>scm:git@github.com:xebia/cakemix.git</connection>
+        <url>git@github.com:wehkamp/cakemix.git</url>
+        <connection>scm:git@github.com:wehkamp/cakemix.git</connection>
       </scm>
       <developers>
         <developer>
@@ -39,5 +27,5 @@ object Publishing {
           <url>http://github.com/raboof</url>
         </developer>
       </developers>
-    ))
+    )
 }
