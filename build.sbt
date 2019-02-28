@@ -11,4 +11,7 @@ licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 formattingSettings
 publishingSettings
 
-libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.21"
+libraryDependencies ++= Seq(
+  "com.typesafe.akka" %% "akka-actor" % "2.5.21" % Provided,
+  "com.typesafe" % "config" % "1.3.3" % Provided
+)
