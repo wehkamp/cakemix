@@ -27,5 +27,5 @@ trait ActorAskTimeoutProvider extends AskTimeoutProvider { this: Actor ⇒
 
 /** For all those tests where you just need a simple askTimeout provider... */
 trait TestOnlyHardcodedAskTimeoutProvider extends AskTimeoutProvider {
-  implicit def askTimeout: Timeout = Timeout(1 second)
+  implicit def askTimeout: Timeout = Timeout(1.second)
 }
