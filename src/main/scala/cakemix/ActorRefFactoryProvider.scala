@@ -1,6 +1,6 @@
 package cakemix
 
-import akka.actor._
+import akka.actor.{ Actor, ActorContext, ActorRefFactory, ExtendedActorSystem }
 
 /**
  * Mixin trait for providing an implementation of the Akka ActorRefFactory trait.
@@ -21,5 +21,5 @@ trait ActorRefFactoryProvider {
  * Implementation of ActorRefFactoryProvider for mixing into Actors.
  */
 trait ActorRefFactoryProviderForActors extends ActorRefFactoryProvider { this: Actor ⇒
-  def actorRefFactory = context
+  def actorRefFactory: ActorRefFactory = context
 }

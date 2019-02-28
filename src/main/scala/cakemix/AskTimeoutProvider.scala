@@ -1,11 +1,9 @@
 package cakemix
 
-import scala.concurrent.duration._
-
+import akka.actor.Actor
+import akka.util.Timeout
 import com.typesafe.config.Config
-
-import akka.actor._
-import akka.util._
+import scala.concurrent.duration._
 
 /**
  * Provides an implicit instance of Timeout for when you use the Akka

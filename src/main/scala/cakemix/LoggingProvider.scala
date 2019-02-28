@@ -1,6 +1,6 @@
 package cakemix
 
-import akka.event._
+import akka.event.{ LoggingAdapter, NoLogging }
 
 /**
  * Handy trait for expressing a need for an Akka LoggerAdapter.
@@ -15,7 +15,7 @@ trait LoggingProvider {
  * NoOp implementation of the LoggingProvider trait, mainly for use in tests.
  */
 trait NoLoggingProvider extends LoggingProvider {
-  def log = NoLogging
+  def log: LoggingAdapter = NoLogging
 }
 
 /**
@@ -26,7 +26,7 @@ trait NoLoggingProvider extends LoggingProvider {
  * to produce proper logging, use a real (slf4j) adapter!
  */
 trait StdOutLoggingProvider extends LoggingProvider {
-  def log = new LoggingAdapter {
+  def log: LoggingAdapter = new LoggingAdapter {
     def isErrorEnabled = true
     def isWarningEnabled = true
     def isInfoEnabled = true

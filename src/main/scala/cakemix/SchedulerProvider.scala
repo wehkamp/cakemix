@@ -1,6 +1,6 @@
 package cakemix
 
-import akka.actor._
+import akka.actor.{ Actor, Scheduler }
 
 /**
  * Mixin trait that provides an Akka Scheduler.

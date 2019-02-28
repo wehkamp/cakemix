@@ -1,6 +1,6 @@
 package cakemix
 
-import akka.actor._
+import akka.actor.Actor
 import akka.event.EventStream
 
 /**
@@ -15,5 +15,5 @@ trait EventStreamProvider {
  * actor's context to provide an instance of EventStream.
  */
 trait EventStreamProviderForActors extends EventStreamProvider { this: Actor ⇒
-  implicit val eventStream = context.system.eventStream
+  implicit val eventStream: EventStream = context.system.eventStream
 }

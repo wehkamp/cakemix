@@ -1,6 +1,6 @@
 package cakemix
 
-import akka.actor._
+import akka.actor.{ Actor, ActorRef, Props }
 
 /**
  * Mixin trait that defines methods for looking up and creating child actors.
