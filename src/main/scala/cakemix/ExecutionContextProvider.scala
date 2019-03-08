@@ -1,7 +1,7 @@
 package cakemix
 
-import scala.concurrent.ExecutionContext
-import akka.actor._
+import akka.actor.Actor
+import scala.concurrent.{ ExecutionContext, ExecutionContextExecutor }
 
 /**
  * Simple mixin trait for providing an ExecutionContext. Very useful in
@@ -18,7 +18,7 @@ trait ExecutionContextProvider {
  * provided as the ExecutionContext.
  */
 trait ActorRefFactoryExecutionContextProvider extends ExecutionContextProvider with ActorRefFactoryProvider {
-  implicit def executionContext = actorRefFactory.dispatcher
+  implicit def executionContext: ExecutionContextExecutor = actorRefFactory.dispatcher
 }
 
 /**
@@ -26,7 +26,7 @@ trait ActorRefFactoryExecutionContextProvider extends ExecutionContextProvider w
  * It uses the Actor's context dispatcher as the ExecutionContext.
  */
 trait ActorExecutionContextProvider extends ExecutionContextProvider { this: Actor ⇒
-  implicit def executionContext = context.dispatcher
+  implicit def executionContext: ExecutionContextExecutor = context.dispatcher
 }
 
 /**

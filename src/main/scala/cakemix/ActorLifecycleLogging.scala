@@ -1,6 +1,6 @@
 package cakemix
 
-import akka.actor._
+import akka.actor.{ Actor, ActorLogging }
 
 trait ActorLifecycleLogging extends Actor
   with ActorLogging {
