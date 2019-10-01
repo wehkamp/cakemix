@@ -22,9 +22,9 @@ trait ActorRefFactoryProvider {
 
   def actorSystem(implicit refFactory: ActorRefFactory): ExtendedActorSystem = {
     refFactory match {
-      case x: ActorContext        ⇒ actorSystem(x.system)
-      case x: ExtendedActorSystem ⇒ x
-      case _                      ⇒ throw new IllegalArgumentException("Unsupported ActorRefFactory implementation: " + refFactory)
+      case x: ActorContext        => actorSystem(x.system)
+      case x: ExtendedActorSystem => x
+      case _                      => throw new IllegalArgumentException("Unsupported ActorRefFactory implementation: " + refFactory)
     }
   }
 }
@@ -32,6 +32,6 @@ trait ActorRefFactoryProvider {
 /**
  * Implementation of ActorRefFactoryProvider for mixing into Actors.
  */
-trait ActorRefFactoryProviderForActors extends ActorRefFactoryProvider { this: Actor ⇒
+trait ActorRefFactoryProviderForActors extends ActorRefFactoryProvider { this: Actor =>
   def actorRefFactory: ActorRefFactory = context
 }

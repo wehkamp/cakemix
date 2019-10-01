@@ -37,7 +37,7 @@ trait ActorRefFactoryExecutionContextProvider extends ExecutionContextProvider w
  * Implementation of [[cakemix.ExecutionContextProvider]] for use in Actors.
  * It uses the Actor's context dispatcher as the ExecutionContext.
  */
-trait ActorExecutionContextProvider extends ExecutionContextProvider { this: Actor ⇒
+trait ActorExecutionContextProvider extends ExecutionContextProvider { this: Actor =>
   implicit def executionContext: ExecutionContextExecutor = context.dispatcher
 }
 

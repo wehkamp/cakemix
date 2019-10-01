@@ -33,7 +33,7 @@ object AskTimeoutProvider {
   }
 }
 
-trait ActorAskTimeoutProvider extends AskTimeoutProvider { this: Actor ⇒
+trait ActorAskTimeoutProvider extends AskTimeoutProvider { this: Actor =>
   implicit def askTimeout: Timeout = AskTimeoutProvider.fromConfig(context.system.settings.config)
 }
 
