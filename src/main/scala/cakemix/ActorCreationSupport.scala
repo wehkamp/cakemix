@@ -36,7 +36,7 @@ trait ActorCreationSupport {
  * The default implementation of the [[cakemix.ActorCreationSupport]] that
  * can be mixed into Actors.
  */
-trait ActorCreationSupportForActors extends ActorCreationSupport { this: Actor ⇒
+trait ActorCreationSupportForActors extends ActorCreationSupport { this: Actor =>
   def createChild(props: Props, name: String): ActorRef = context.actorOf(props, name)
   def getChild(name: String): Option[ActorRef] = context.child(name)
 }

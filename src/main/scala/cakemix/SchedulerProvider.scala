@@ -25,6 +25,6 @@ trait SchedulerProvider {
  * Implementation of [[cakemix.SchedulerProvider]] that uses the
  * actor's context to provide an instance of Scheduler.
  */
-trait SchedulerProviderForActors { this: Actor ⇒
+trait SchedulerProviderForActors { this: Actor =>
   def scheduler: Scheduler = context.system.scheduler
 }
