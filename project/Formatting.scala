@@ -8,5 +8,6 @@ object Formatting {
     .setPreference(AlignSingleLineCaseStatements.MaxArrowIndent, 90)
     .setPreference(DanglingCloseParenthesis, Preserve)
     .setPreference(DoubleIndentConstructorArguments, true)
-    .setPreference(RewriteArrowSymbols, true))
+    .setPreference(RewriteArrowSymbols, true)
+    .setPreference(UseUnicodeArrows, false))
 }
