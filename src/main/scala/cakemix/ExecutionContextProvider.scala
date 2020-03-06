@@ -45,6 +45,6 @@ trait ActorExecutionContextProvider extends ExecutionContextProvider { this: Act
  * Implementation of [[cakemix.ExecutionContextProvider]] that uses the
  * ExecutionContext provided by scala.concurrent.ExecutionContext.global.
  */
-trait GlobalExecutionContextProvider {
+trait GlobalExecutionContextProvider extends ExecutionContextProvider {
   implicit def executionContext: ExecutionContext = scala.concurrent.ExecutionContext.global
 }
