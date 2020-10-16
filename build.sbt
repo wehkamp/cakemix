@@ -12,6 +12,6 @@ formattingSettings
 publishingSettings
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-actor" % "2.5.31" % Provided,
+  "com.typesafe.akka" %% "akka-actor" % "2.5.32" % Provided,
   "com.typesafe" % "config" % "1.4.0" % Provided
 )
