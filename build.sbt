@@ -3,8 +3,8 @@ import Publishing._
 
 name := "cakemix"
 organization := "nl.wehkamp.cakemix"
-scalaVersion := "2.12.13"
-crossScalaVersions := Seq("2.11.12", "2.12.13", "2.13.4")
+scalaVersion := "2.12.15"
+crossScalaVersions := Seq("2.11.12", "2.12.15", "2.13.4")
 
 licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0"))
 
