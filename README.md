@@ -1,6 +1,5 @@
 # cakemix
 
-[![Build Status](https://travis-ci.org/wehkamp/cakemix.svg)](https://travis-ci.org/wehkamp/cakemix)
 ![Current Version](https://img.shields.io/badge/version-1.3.0-brightgreen.svg?style=flat "1.3.0")
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat "Apache 2.0")](LICENSE)
 
