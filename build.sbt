@@ -13,5 +13,5 @@ publishingSettings
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.5.32" % Provided,
-  "com.typesafe" % "config" % "1.4.1" % Provided
+  "com.typesafe" % "config" % "1.4.2" % Provided
 )
