@@ -12,31 +12,27 @@
 
 package cakemix
 
-import akka.event.{ LoggingAdapter, NoLogging }
+import akka.event.{LoggingAdapter, NoLogging}
 
-/**
- * Handy trait for expressing a need for an Akka LoggerAdapter.
- * This trait is usually implemented by mixing the standard Akka ActorLogging trait
- * into your top-level implementation actor (i.e. the Http entrypoint actor).
- */
+/** Handy trait for expressing a need for an Akka LoggerAdapter. This trait is usually implemented by mixing the
+  * standard Akka ActorLogging trait into your top-level implementation actor (i.e. the Http entrypoint actor).
+  */
 trait LoggingProvider {
   def log: LoggingAdapter
 }
 
-/**
- * NoOp implementation of the LoggingProvider trait, mainly for use in tests.
- */
+/** NoOp implementation of the LoggingProvider trait, mainly for use in tests.
+  */
 trait NoLoggingProvider extends LoggingProvider {
   def log: LoggingAdapter = NoLogging
 }
 
-/**
- * Handy for test debugging when you want to make absolutely sure your
- * log messages will not be filtered out by Akka and/or Logback.
- *
- * Only use when needed, tests should not normally produce logging and if you want
- * to produce proper logging, use a real (slf4j) adapter!
- */
+/** Handy for test debugging when you want to make absolutely sure your log messages will not be filtered out by Akka
+  * and/or Logback.
+  *
+  * Only use when needed, tests should not normally produce logging and if you want to produce proper logging, use a
+  * real (slf4j) adapter!
+  */
 trait StdOutLoggingProvider extends LoggingProvider {
   def log: LoggingAdapter = new LoggingAdapter {
     def isErrorEnabled = true

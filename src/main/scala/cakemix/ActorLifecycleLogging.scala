@@ -12,10 +12,9 @@
 
 package cakemix
 
-import akka.actor.{ Actor, ActorLogging }
+import akka.actor.{Actor, ActorLogging}
 
-trait ActorLifecycleLogging extends Actor
-  with ActorLogging {
+trait ActorLifecycleLogging extends Actor with ActorLogging {
 
   override def preStart: Unit = {
     log.info(s"Starting. Path: ${self.path}.")
