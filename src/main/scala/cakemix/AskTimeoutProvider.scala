@@ -12,16 +12,14 @@
 
 package cakemix
 
-import akka.actor.{ Actor, ActorSystem }
+import akka.actor.{Actor, ActorSystem}
 import akka.util.Timeout
 import com.typesafe.config.Config
 
 import scala.concurrent.duration._
 
-/**
- * Provides an implicit instance of Timeout for when you use the Akka
- * ask pattern
- */
+/** Provides an implicit instance of Timeout for when you use the Akka ask pattern
+  */
 trait AskTimeoutProvider {
   implicit def askTimeout: Timeout
 }
@@ -47,4 +45,3 @@ trait ActorSystemAskTimeoutProvider extends AskTimeoutProvider {
 trait TestOnlyHardcodedAskTimeoutProvider extends AskTimeoutProvider {
   implicit def askTimeout: Timeout = Timeout(1.second)
 }
-
