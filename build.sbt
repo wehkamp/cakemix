@@ -17,7 +17,7 @@ developers := List(
     name = "Arnout Engelen",
     email = "",
     url = url("https://github.com/raboof")
-  ),
+  )
 )
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.5.32" % Provided,
