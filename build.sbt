@@ -1,6 +1,6 @@
 name := "cakemix"
 organization := "nl.wehkamp.cakemix"
-scalaVersion := "2.12.15"
+scalaVersion := "2.13.10"
 crossScalaVersions := Seq("2.11.12", "2.12.17", "2.13.10")
 
 licenses += License.Apache2
