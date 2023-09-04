@@ -19,6 +19,6 @@ developers := List(
   )
 )
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-actor" % "2.5.32" % Provided,
+  "com.typesafe.akka" %% "akka-actor" % "2.6.21" % Provided,
   "com.typesafe" % "config" % "1.4.2" % Provided
 )
