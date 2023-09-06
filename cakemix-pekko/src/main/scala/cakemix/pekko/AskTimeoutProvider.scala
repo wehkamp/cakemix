@@ -38,7 +38,7 @@ trait ActorAskTimeoutProvider extends AskTimeoutProvider { this: Actor =>
 
 trait ActorSystemAskTimeoutProvider extends AskTimeoutProvider {
   def system: ActorSystem
-  implicit def askTimeout = AskTimeoutProvider.fromConfig(system.settings.config)
+  implicit def askTimeout: Timeout = AskTimeoutProvider.fromConfig(system.settings.config)
 }
 
 /** For all those tests where you just need a simple askTimeout provider... */
