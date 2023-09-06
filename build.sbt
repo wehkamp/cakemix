@@ -3,7 +3,7 @@ inThisBuild(
     scalaVersion := "2.13.11",
     organizationName := "nl.wehkamp.cakemix",
     licenses += License.Apache2,
-    publish / skip := false,
+    publish / skip := true,
     developers := List(
       Developer(
         id = "agemooij",
@@ -29,10 +29,10 @@ lazy val pekkoActor = "org.apache.pekko" %% "pekko-actor" % "1.0.1" % Provided
 
 lazy val `cakemix` = (project in file("cakemix"))
   .settings(name := "cakemix")
-  .settings(publish / skip := true)
+  .settings(publish / skip := false)
   .settings(libraryDependencies ++= Seq(typesafeConfig, akkaActor))
 
 lazy val `cakemix-pekko` = (project in file("cakemix-pekko"))
   .settings(name := "cakemix-pekko")
-  .settings(publish / skip := true)
+  .settings(publish / skip := false)
   .settings(libraryDependencies ++= Seq(typesafeConfig, pekkoActor))
