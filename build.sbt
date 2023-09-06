@@ -2,9 +2,9 @@ ThisBuild / organization := "nl.wehkamp"
 ThisBuild / publish / skip := true
 
 lazy val commonSettings = Seq(
-  organization := "nl.wehkamp",
   scalaVersion := "2.13.11",
   licenses += License.Apache2,
+  homepage := Some(url("https://github.com/wehkamp/cakemix")),
   publish / skip := false,
   developers := List(
     Developer(
