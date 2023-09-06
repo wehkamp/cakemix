@@ -10,7 +10,7 @@
  * additional information regarding copyright ownership.
  */
 
-package cakemix
+package cakemix.akka
 
 import akka.actor.{Actor, ActorLogging}
 

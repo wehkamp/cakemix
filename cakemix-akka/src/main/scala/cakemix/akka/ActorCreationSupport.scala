@@ -10,7 +10,7 @@
  * additional information regarding copyright ownership.
  */
 
-package cakemix
+package cakemix.akka
 
 import akka.actor.{Actor, ActorRef, Props}
 
@@ -20,7 +20,7 @@ import akka.actor.{Actor, ActorRef, Props}
   * implements HttpService. That Spray endpoint actor can be built up using the cake pattern, combining many mixin
   * traits that provide parts of the API and their implementations (i.e. child actors). Those Mixin traits can then use
   * this trait to abstract away the creation of child actors until they all gets mixed in together with an
-  * implementation like [[cakemix.ActorCreationSupportForActors]].
+  * implementation like [[ActorCreationSupportForActors]].
   */
 trait ActorCreationSupport {
   def createChild(props: Props, name: String): ActorRef
@@ -28,7 +28,7 @@ trait ActorCreationSupport {
   def getOrCreateChild(props: Props, name: String): ActorRef = getChild(name).getOrElse(createChild(props, name))
 }
 
-/** The default implementation of the [[cakemix.ActorCreationSupport]] that can be mixed into Actors.
+/** The default implementation of the [[ActorCreationSupport]] that can be mixed into Actors.
   */
 trait ActorCreationSupportForActors extends ActorCreationSupport { this: Actor =>
   def createChild(props: Props, name: String): ActorRef = context.actorOf(props, name)
