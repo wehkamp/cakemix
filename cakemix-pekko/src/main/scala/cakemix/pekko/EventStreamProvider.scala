@@ -21,7 +21,7 @@ trait EventStreamProvider {
   def eventStream: EventStream
 }
 
-/** Implementation of [[cakemix.pekko.EventStreamProvider]] that uses the actor's context to provide an instance of
+/** Implementation of [[EventStreamProvider]] that uses the actor's context to provide an instance of
   * EventStream.
   */
 trait EventStreamProviderForActors extends EventStreamProvider { this: Actor =>

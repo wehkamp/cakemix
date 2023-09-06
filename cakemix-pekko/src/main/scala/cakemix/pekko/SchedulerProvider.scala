@@ -20,7 +20,7 @@ trait SchedulerProvider {
   implicit def scheduler: Scheduler
 }
 
-/** Implementation of [[cakemix.pekko.SchedulerProvider]] that uses the actor's context to provide an instance of Scheduler.
+/** Implementation of [[SchedulerProvider]] that uses the actor's context to provide an instance of Scheduler.
   */
 trait SchedulerProviderForActors { this: Actor =>
   def scheduler: Scheduler = context.system.scheduler
