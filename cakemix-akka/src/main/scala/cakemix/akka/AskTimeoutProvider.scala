@@ -10,13 +10,13 @@
  * additional information regarding copyright ownership.
  */
 
-package cakemix
+package cakemix.akka
 
 import akka.actor.{Actor, ActorSystem}
 import akka.util.Timeout
-import com.typesafe.config.Config
-
 import scala.concurrent.duration._
+
+import com.typesafe.config.Config
 
 /** Provides an implicit instance of Timeout for when you use the Akka ask pattern
   */

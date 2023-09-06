@@ -28,8 +28,8 @@ lazy val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.6.21" % Provided
 
 lazy val pekkoActor = "org.apache.pekko" %% "pekko-actor" % "1.0.1" % Provided
 
-lazy val `cakemix-akka` = (project in file("cakemix"))
-  .settings(name := "cakemix")
+lazy val `cakemix-akka` = (project in file("cakemix-akka"))
+  .settings(name := "cakemix-akka")
   .settings(commonSettings)
   .settings(libraryDependencies ++= Seq(typesafeConfig, akkaActor))
 

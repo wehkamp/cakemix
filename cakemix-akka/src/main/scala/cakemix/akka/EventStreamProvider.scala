@@ -10,7 +10,7 @@
  * additional information regarding copyright ownership.
  */
 
-package cakemix
+package cakemix.akka
 
 import akka.actor.Actor
 import akka.event.EventStream
@@ -21,7 +21,7 @@ trait EventStreamProvider {
   def eventStream: EventStream
 }
 
-/** Implementation of [[cakemix.EventStreamProvider]] that uses the actor's context to provide an instance of
+/** Implementation of [[EventStreamProvider]] that uses the actor's context to provide an instance of
   * EventStream.
   */
 trait EventStreamProviderForActors extends EventStreamProvider { this: Actor =>
