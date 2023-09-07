@@ -22,15 +22,15 @@ trait ExecutionContextProvider {
   implicit def executionContext: ExecutionContext
 }
 
-/** Implementation of ExecutionContextProvider that bridges with [[ActorRefFactoryProvider]] so anything that
-  * provides an ActorRefFactory will get the dispatcher of the associated ActorSystem provided as the ExecutionContext.
+/** Implementation of ExecutionContextProvider that bridges with [[ActorRefFactoryProvider]] so anything that provides
+  * an ActorRefFactory will get the dispatcher of the associated ActorSystem provided as the ExecutionContext.
   */
 trait ActorRefFactoryExecutionContextProvider extends ExecutionContextProvider with ActorRefFactoryProvider {
   implicit def executionContext: ExecutionContextExecutor = actorRefFactory.dispatcher
 }
 
-/** Implementation of [[ExecutionContextProvider]] for use in Actors. It uses the Actor's context dispatcher as
-  * the ExecutionContext.
+/** Implementation of [[ExecutionContextProvider]] for use in Actors. It uses the Actor's context dispatcher as the
+  * ExecutionContext.
   */
 trait ActorExecutionContextProvider extends ExecutionContextProvider { this: Actor =>
   implicit def executionContext: ExecutionContextExecutor = context.dispatcher

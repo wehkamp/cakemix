@@ -21,8 +21,7 @@ trait EventStreamProvider {
   def eventStream: EventStream
 }
 
-/** Implementation of [[EventStreamProvider]] that uses the actor's context to provide an instance of
-  * EventStream.
+/** Implementation of [[EventStreamProvider]] that uses the actor's context to provide an instance of EventStream.
   */
 trait EventStreamProviderForActors extends EventStreamProvider { this: Actor =>
   implicit val eventStream: EventStream = context.system.eventStream
