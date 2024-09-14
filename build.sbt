@@ -26,7 +26,7 @@ lazy val typesafeConfig = "com.typesafe" % "config" % "1.4.3" % Provided
 
 lazy val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.6.21" % Provided
 
-lazy val pekkoActor = "org.apache.pekko" %% "pekko-actor" % "1.1.0" % Provided
+lazy val pekkoActor = "org.apache.pekko" %% "pekko-actor" % "1.1.1" % Provided
 
 lazy val `cakemix-akka` = (project in file("cakemix-akka"))
   .settings(name := "cakemix-akka")
