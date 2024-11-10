@@ -14,7 +14,7 @@ package cakemix.akka
 
 import akka.actor.{Actor, ActorSystem}
 import akka.util.Timeout
-import scala.concurrent.duration._
+import scala.concurrent.duration.*
 
 import com.typesafe.config.Config
 
