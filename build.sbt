@@ -6,7 +6,7 @@ lazy val commonSettings = Seq(
   crossScalaVersions += "3.3.4",
   scalacOptions ++= (CrossVersion.partialVersion(scalaVersion.value) match {
     case Some((2, 13)) => Seq("-Xsource:3")
-    case _             => Seq.empty[String]
+    case _ => Seq.empty[String]
   }),
   licenses += License.Apache2,
   homepage := Some(url("https://github.com/wehkamp/cakemix")),
@@ -31,7 +31,7 @@ lazy val typesafeConfig = "com.typesafe" % "config" % "1.4.3" % Provided
 
 lazy val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.6.21" % Provided
 
-lazy val pekkoActor = "org.apache.pekko" %% "pekko-actor" % "1.1.2" % Provided
+lazy val pekkoActor = "org.apache.pekko" %% "pekko-actor" % "1.1.3" % Provided
 
 lazy val `cakemix-akka` = (project in file("cakemix-akka"))
   .settings(name := "cakemix-akka")
@@ -42,4 +42,3 @@ lazy val `cakemix-pekko` = (project in file("cakemix-pekko"))
   .settings(name := "cakemix-pekko")
   .settings(commonSettings)
   .settings(libraryDependencies ++= Seq(typesafeConfig, pekkoActor))
-
